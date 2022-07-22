@@ -129,10 +129,10 @@ table {
 }
 
 /* font-family: 'Oswald', sans-serif; */
-/* font-family: 'Permanent Marker', cursive; */
+/* font-family: 'Nunito Sans', sans-serif; */
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Permanent Marker", cursive;
 }
 .main-wrapper {
   padding: 2rem;
@@ -145,7 +145,7 @@ body {
   max-width: 860px;
 }
 .h1 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   font-size: 68px;
   margin: 20px 0;
@@ -158,7 +158,7 @@ body {
   line-height: 40px;
 }
 .h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   font-size: 52px;
   margin: 25px 0;
@@ -211,7 +211,7 @@ body {
 /* Header */
 .header {
   display: flex;
-  align-items: center;
+  align-items: left;
   margin-bottom: 100px;
 }
 .header-logo {
@@ -223,11 +223,11 @@ body {
 }
 .main-nav__list {
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 .main-nav__item {
   margin-left: 2rem;
-  text-align: center;
+  text-align: left;
 }
 .main-nav__item a {
   color: #000;
@@ -267,7 +267,7 @@ body {
 /* Hero */
 .hero-section {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
 }
 .home-hero-image {
@@ -292,39 +292,39 @@ body {
   max-width: 640px;
 }
 
-/* Home - space junk section */
+/* Home - marketing section */
 .space-junk {
   margin-top: 150px;
   display: flex;
   justify-content: space-between;
 }
-.space-junk__text {
+.marketing__text {
   width: 66.66666%;
   flex-shrink: 0;
 }
-.space-junk__subtitle {
+.marketing__subtitle {
   font-weight: 300;
   font-size: 22px;
   line-height: 30px;
   margin-bottom: 40px;
   width: 70%;
 }
-.space-junk__questions-wrapper {
+.marketing__questions-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-.space-junk__question {
+.marketing__question {
   width: 30%;
   margin: 20px 0;
   margin-right: 20px;
 }
-.space-junk__question-icon {
+.marketing__question-icon {
   display: block;
   margin-bottom: 20px;
   width: 94px;
   height: 94px;
 }
-.space-junk__question-text {
+.marketing__question-text {
   display: inline-block;
   max-width: 315px;
   font-style: italic;
@@ -332,81 +332,17 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
-.space-junk__graphic-wrapper {
+.marketing__graphic-wrapper {
   width: 25%;
   align-self: flex-end;
 }
-.space-junk__graphic {
+.marketing__graphic {
   width: 100%;
 }
-.space-junk__graphic-wrapper-mobile {
+.marking__graphic-wrapper-mobile {
   display: none;
 }
 
-/* Home - do for you section */
-.do-for-you {
-  display: flex;
-  margin-top: 150px;
-  justify-content: space-between;
-}
-.do-for-you__graphic-wrapper {
-  width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.do-for-you__graphic-wrapper-mobile {
-  display: none;
-}
-.do-for-you__graphic {
-  width: 430px;
-}
-.do-for-you__text {
-  margin-right: auto;
-  margin-left: auto;
-}
-.do-for-you__point {
-  max-width: 550px;
-  font-size: 22px;
-  line-height: 26px;
-  margin: 30px 0;
-}
-.do-for-you__cta {
-  display: block;
-  margin-top: 20px;
-  width: 272px;
-}
-
-/* collaborative quote section */
-.collaboration-quote__wrapper {
-  max-width: 1113px;
-  margin: 0 auto;
-  margin-top: 150px;
-}
-.collaboration-quote {
-  font-family: "Permanent Marker", cursive;
-  font-size: 48px;
-  line-height: 52px;
-}
-.collaboration-quote__source {
-  display: block;
-  font-size: 28px;
-  line-height: 22px;
-  margin-top: 40px;
-  align-self: flex-start;
-}
-.collaboration-quote__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 272px;
-  margin-top: 40px;
-}
-.collaboration-quote__btn-icon {
-  margin-right: 10px;
-  height: 21.15px;
-  width: 23.62px;
-}
 
 /* Footer */
 .footer-separator {
@@ -419,11 +355,11 @@ body {
 }
 .footer-nav__list {
   margin: 0 auto 50px;
-  justify-content: center;
+  justify-content: left;
 }
 .footer-copyright {
   display: block;
-  text-align: center;
+  text-align: left;
   margin-bottom: 50px;
   font-weight: 300;
   font-size: 24px;
@@ -458,7 +394,7 @@ body {
   margin-top: 100px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: left;
 }
 .product-value-prop__graphic-wrapper {
   width: 530px;
@@ -693,12 +629,12 @@ body {
 
 .subSection{
   display:flex;
-  /* align-items: center; */
+  /* align-items: left; */
   gap: 5vmin;
   text-align: left;
   margin: 10vmin 0;
   flex-wrap: wrap;
-      justify-content: center
+      justify-content: left
   
 }
 .subsectionFoldable{
