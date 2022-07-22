@@ -1,0 +1,148 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@mediajunkie 
+mediajunkie
+/
+optilisten
+Public
+Code
+Issues
+Pull requests
+Projects
+Wiki
+Security
+Insights
+Settings
+optilisten
+/
+styles
+/
+responsive.css
+in
+main
+ 
+
+Spaces
+
+2
+
+No wrap
+1
+@media only screen and (max-width: 1023px) {
+2
+  .large-screen-only {
+3
+    display: none;
+4
+  }
+5
+  .about__wrapper {
+6
+  }
+7
+  .h1 {
+8
+    font-size: 45px;
+9
+    line-height: 54px;
+10
+    text-align: center;
+11
+  }
+12
+  .h2 {
+13
+    font-size: 24px;
+14
+    line-height: 32px;
+15
+    text-align: center;
+16
+  }
+17
+  .h3 {
+18
+    font-size: 40px;
+19
+    text-align: center;
+20
+  }
+21
+  .h4 {
+22
+    text-align: center;
+23
+    font-size: 26px;
+24
+  }
+25
+​
+26
+  /* Buttons */
+27
+  .btn {
+28
+  }
+29
+​
+30
+  /* Header */
+31
+  .header {
+32
+    margin-bottom: 75px;
+33
+  }
+34
+  .header .main-nav__list {
+35
+    display: none;
+36
+  }
+37
+  .header-logo,
+38
+  .header-logo img,
+39
+  .footer-logo {
+40
+    width: 8rem;
+41
+  }
+42
+  .main-nav__mobile-wrapper {
+43
+    display: block;
+44
+  }
+45
+  .main-nav__mobile-menu-checkbox {
+@mediajunkie
+Commit changes
+Commit summary
+Create responsive.css
+Optional extended description
+Add an optional extended description…
+ Commit directly to the main branch.
+ Create a new branch for this commit and start a pull request. Learn more about pull requests.
+ 
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+You have unread notifications
