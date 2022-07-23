@@ -129,10 +129,10 @@ table {
 }
 
 /* font-family: 'Oswald', sans-serif; */
-/* font-family: 'Nunito Sans', sans-serif; */
+/* font-family: 'Permanent Marker', cursive */
 
 body {
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Nunito Sans', sans-serif;
 }
 .main-wrapper {
   padding: 2rem;
@@ -145,14 +145,14 @@ body {
   max-width: 860px;
 }
 .h1 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Permanent Marker', cursive;
   font-weight: 700;
   font-size: 68px;
   margin: 20px 0;
   line-height: 84px;
 }
 .h2 {
-  /* TODO: needs to change */
+  font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-size: 32px;
   line-height: 40px;
