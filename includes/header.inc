@@ -11,7 +11,7 @@
             <li class="main-nav__item UX">
               <a href="ux.html">UX</a>
             </li>
-            <li class="main-nav__item books">
+            <li class="main-nav__item event">
               <a href="http://designinproduct.info">Event</a>
             </li>  
             <li class="main-nav__item books">
