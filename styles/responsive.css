@@ -411,4 +411,120 @@
     display: block;
     margin-bottom: -60px;
   }
+
+  /* Community page */
+  .community-hero__description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .community-form-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .form-group-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-label {
+    font-size: 16px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .community-form__submit {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .community-benefits {
+    margin-top: 100px;
+  }
+
+  .community-benefits__list {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .community-benefit {
+    text-align: center;
+  }
+
+  .community-benefit__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .community-benefit__title {
+    font-size: 20px;
+  }
+
+  .community-benefit__description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  /* Thank you page */
+  .thank-you-hero__description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .next-steps {
+    margin: 75px 0;
+  }
+
+  .next-steps__list {
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .next-step {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .next-step__number {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    align-self: center;
+  }
+
+  .next-step__title {
+    font-size: 20px;
+  }
+
+  .next-step__description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .while-you-wait {
+    margin: 75px 0;
+  }
+
+  .while-you-wait__description {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 20px;
+  }
+
+  .while-you-wait__links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .while-you-wait__links .btn {
+    width: 250px;
+  }
 }
