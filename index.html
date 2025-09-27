@@ -294,14 +294,14 @@
           <div class="share-menu__content">
             <h4>Share this quote</h4>
             <div class="share-options">
-              <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(text + ' ' + url)}" target="_blank" class="share-option">
-                <span>Twitter</span>
-              </a>
               <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}" target="_blank" class="share-option">
                 <span>LinkedIn</span>
               </a>
               <a href="https://bsky.app/intent/compose?text=${encodeURIComponent(text + ' ' + url)}" target="_blank" class="share-option">
                 <span>Bluesky</span>
+              </a>
+              <a href="https://mastodon.social/share?text=${encodeURIComponent(text + ' ' + url)}" target="_blank" class="share-option">
+                <span>Mastodon</span>
               </a>
               <button onclick="copyToClipboard('${text.replace(/'/g, "\\'")} ${url}')" class="share-option">
                 <span>Copy Link</span>
