@@ -1,0 +1,261 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,800;1,400&family=Oswald:wght@700&family=Permanent+Marker&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="shortcut icon" href="images/dp-favicon-3.png"/>
+
+    <meta property="og:site_name" content="Design in Product">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.designinproduct.com/consultation">
+    <meta property="og:title" content="Work with Design in Product">
+    <meta property="og:description" content="Book a consultation with Christian Crumlish to transform your product organization">
+    <meta property="og:image" content="https://designinproduct.com/images/social-media-card.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Book a consultation with Christian Crumlish to transform your product organization">
+    <meta name="twitter:title" content="Work with Design in Product">
+    <meta name="twitter:site" content="@mediajunkie">
+    <meta name="twitter:creator" content="@mediajunkie">
+    <meta name="twitter:url" content="https://designinproduct.com/consultation">
+    <meta name="twitter:image" content="https://designinproduct.com/images/social-media-card.jpg">
+
+    <title>Book a Consultation - Design in Product</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Header start -->
+      <div class="header">
+        <a href="/" class="header-logo">
+          <img src="images/dp-logo.svg" alt="Design in Product consultancy logo">
+        </a>
+        <nav>
+          <ul class="main-nav__list">
+            <li class="main-nav__item product">
+              <a href="product.html">Product</a>
+            </li>
+            <li class="main-nav__item UX">
+              <a href="ux.html">UX</a>
+            </li>
+            <li class="main-nav__item books">
+              <a href="http://designinproduct.info">Event</a>
+            </li>
+            <li class="main-nav__item books">
+              <a href="books.html">Books</a>
+            </li>
+            <li class="main-nav__item contact active">
+              <a href="contact.html">Contact</a>
+            </li>
+            <li class="main-nav__item about">
+              <a href="about.html">About</a>
+            </li>
+            <li class="main-nav__item join">
+              <a href="community.html">Join the Community</a>
+            </li>
+          </ul>
+
+          <div class="main-nav__mobile-wrapper">
+            <label for="toggle" class="main-nav__mobile-menu-trigger">
+              <img src="images/mobile-menu.png" alt="open menu">
+            </label>
+            <input type="checkbox" id="toggle" class="main-nav__mobile-menu-checkbox">
+            <div class="main-nav__mobile-collapse">
+              <label for="toggle" class="main-nav__mobile-menu-trigger main-nav__mobile-menu-trigger-close">
+                <img src="images/mobile-menu-x.png" alt="close menu">
+              </label>
+              <ul class="main-nav__mobile-list">
+                <li class="main-nav__item">
+                  <a href="product.html">Product</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="ux.html">UX</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="http://designinproduct.info">Event</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="books.html">Books</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="contact.html">Contact</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="about.html">About</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="community.html">Join the Community</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Header end -->
+
+      <div class="main-content-wrapper">
+        <!-- Hero start -->
+        <div class="consultation-hero">
+          <div class="consultation-hero__content">
+            <h1 class="h1">Let's Work Together</h1>
+            <p class="h2 consultation-hero__description">Ready to learn how to lead empowered product teams that deliver meaningful value to the lives of real people? Let's talk about how I can help transform your product organization.</p>
+          </div>
+        </div>
+        <!-- Hero end -->
+
+        <!-- Consultation Form start -->
+        <div class="consultation-form-section">
+          <div class="consultation-form-wrapper">
+            <p class="consultation-form__intro">Thanks for getting in touch. Let's start by collecting your contact information.</p>
+
+            <form id="consultationForm" class="consultation-form" action="https://docs.google.com/forms/d/e/[CONSULTATION_FORM_ID]/formResponse" method="POST" target="hidden_iframe">
+
+              <div class="form-group-row">
+                <div class="form-group optional">
+                  <label for="firstName" class="form-label">First Name <span class="optional-text">(optional)</span></label>
+                  <input type="text" id="firstName" name="entry.[FIRST_NAME_ID]" class="form-input" placeholder="Jane">
+                </div>
+                <div class="form-group optional">
+                  <label for="lastName" class="form-label">Last Name <span class="optional-text">(optional)</span></label>
+                  <input type="text" id="lastName" name="entry.[LAST_NAME_ID]" class="form-input" placeholder="Doe">
+                </div>
+              </div>
+
+              <div class="form-group optional">
+                <label for="email" class="form-label">Email <span class="optional-text">(optional)</span></label>
+                <input type="email" id="email" name="entry.[EMAIL_ID]" class="form-input" placeholder="jane@company.com">
+              </div>
+
+              <div class="form-group optional">
+                <label for="linkedin" class="form-label">LinkedIn profile or personal website <span class="optional-text">(optional)</span></label>
+                <input type="url" id="linkedin" name="entry.[LINKEDIN_ID]" class="form-input" placeholder="https://linkedin.com/in/yourname">
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group optional">
+                  <label for="company" class="form-label">Company Name <span class="optional-text">(optional)</span></label>
+                  <input type="text" id="company" name="entry.[COMPANY_ID]" class="form-input" placeholder="Acme Corp">
+                </div>
+                <div class="form-group optional">
+                  <label for="companyWebsite" class="form-label">Company Website <span class="optional-text">(optional)</span></label>
+                  <input type="url" id="companyWebsite" name="entry.[COMPANY_WEBSITE_ID]" class="form-input" placeholder="https://acmecorp.com">
+                </div>
+              </div>
+
+              <div class="form-group optional">
+                <label for="teamSize" class="form-label">Product Team Size <span class="optional-text">(optional)</span></label>
+                <select id="teamSize" name="entry.[TEAM_SIZE_ID]" class="form-input form-select">
+                  <option value="">Choose an option...</option>
+                  <option value="Just me">Just me</option>
+                  <option value="2-5 people">2-5 people</option>
+                  <option value="6-10 people">6-10 people</option>
+                  <option value="11-25 people">11-25 people</option>
+                  <option value="26-50 people">26-50 people</option>
+                  <option value="50+ people">50+ people</option>
+                </select>
+              </div>
+
+              <div class="form-group optional">
+                <label for="struggles" class="form-label">What are you currently struggling with? <span class="optional-text">(optional)</span></label>
+                <textarea id="struggles" name="entry.[STRUGGLES_ID]" class="form-textarea" placeholder="Tell me about your current challenges with product strategy, team alignment, execution, or anything else that's keeping you up at night..."></textarea>
+                <p class="form-help-text">This helps me understand how I can best support you</p>
+              </div>
+
+              <div class="form-submit-section">
+                <button type="submit" class="btn pink-btn consultation-form__submit">Send Message</button>
+                <p class="form-privacy-text">Christian will be in touch within two working days.</p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <!-- Consultation Form end -->
+
+        <!-- What Happens Next start -->
+        <div class="consultation-next-steps">
+          <h3 class="h3">What happens next?</h3>
+          <div class="consultation-next-steps__list">
+            <div class="consultation-step">
+              <div class="consultation-step__number">1</div>
+              <div class="consultation-step__content">
+                <h4 class="consultation-step__title">Quick Response</h4>
+                <p class="consultation-step__description">I'll review your message and respond within two working days with initial thoughts and next steps.</p>
+              </div>
+            </div>
+            <div class="consultation-step">
+              <div class="consultation-step__number">2</div>
+              <div class="consultation-step__content">
+                <h4 class="consultation-step__title">Discovery Call</h4>
+                <p class="consultation-step__description">We'll schedule a 30-minute call to discuss your challenges and explore how I can help.</p>
+              </div>
+            </div>
+            <div class="consultation-step">
+              <div class="consultation-step__number">3</div>
+              <div class="consultation-step__content">
+                <h4 class="consultation-step__title">Custom Proposal</h4>
+                <p class="consultation-step__description">Based on our conversation, I'll create a tailored proposal for how we can work together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- What Happens Next end -->
+
+      </div>
+    </div>
+
+    <footer>
+      <img class="footer-separator" src="images/footer-line-illus.png" alt="separator">
+      <img class="footer-logo" src="images/dp-logo.svg" alt="Design in Product consultancy logo">
+      <nav>
+        <ul class="main-nav__list footer-nav__list">
+          <li class="main-nav__item product">
+            <a href="product.html">Product</a>
+          </li>
+          <li class="main-nav__item UX">
+            <a href="ux.html">UX</a>
+          </li>
+          <li class="main-nav__item books">
+            <a href="books.html">Books</a>
+          </li>
+          <li class="main-nav__item contact">
+            <a href="contact.html">Contact</a>
+          </li>
+          <li class="main-nav__item about">
+            <a href="about.html">About</a>
+          </li>
+          <li class="main-nav__item join">
+            <a href="community.html">Join The Community</a>
+          </li>
+        </ul>
+      </nav>
+      <span class="footer-copyright">Copyright © 2021 &ndash;
+        <script type="text/javascript">document.write( new Date().getFullYear() );</script>
+        Design in Product. All rights reserved.
+      </span>
+    </footer>
+
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+      // Form submission handling
+      document.getElementById('consultationForm').addEventListener('submit', function(e) {
+        // Show loading state
+        const submitButton = document.querySelector('.consultation-form__submit');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+
+        // After form submits (brief delay for Google Forms processing)
+        setTimeout(function() {
+          window.location.href = 'consultation-thank-you.html';
+        }, 2000);
+      });
+    </script>
+
+  </body>
+</html>
