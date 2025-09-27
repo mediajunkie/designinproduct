@@ -154,11 +154,12 @@
         <span class="collaboration-quote__source">Christian Crumlish,
           ‘Growing
           Product People’</span>
-        <a href="https://twitter.com/intent/tweet?text=%22Please%20don%27t%20say%20UI/UX.%20It%20sets%20my%20teeth%20on%20edge.%22%20%E2%80%94%C2%A0%40mediajunkie%20www.designinproduct.com&original_referer=https://clicktotweet.com&related=tweetdripapp" class="btn blue-btn collaboration-quote__btn">
-          <img class="collaboration-quote__btn-icon"
-            src="images/btn-twitter-icon.svg" alt="twitter icon">
-          <span>Tweet This</span>
-        </a>
+        <button class="btn blue-btn collaboration-quote__btn" onclick="shareQuote('Please don\'t say UI/UX. It sets my teeth on edge.', 'Christian Crumlish, Growing Product People')">
+          <svg class="collaboration-quote__btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.92 18 21.92C19.61 21.92 20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08Z" fill="currentColor"/>
+          </svg>
+          <span>Share Quote</span>
+        </button>
       </div>
       <!-- Collaboration quote end -->
     </div>
@@ -195,5 +196,67 @@
           Design in Product. All rights reserved.
         </span>
     </footer>
+    <script>
+      function shareQuote(quote, attribution) {
+        const text = `"${quote}" — ${attribution}`;
+        const url = window.location.href;
+
+        if (navigator.share) {
+          navigator.share({
+            title: 'Quote from Growing Product People',
+            text: text,
+            url: url
+          }).catch(err => console.log('Error sharing:', err));
+          return;
+        }
+
+        const shareMenu = createShareMenu(text, url);
+        document.body.appendChild(shareMenu);
+        shareMenu.style.display = 'block';
+        setTimeout(() => shareMenu.classList.add('show'), 10);
+      }
+
+      function createShareMenu(text, url) {
+        const menu = document.createElement('div');
+        menu.className = 'share-menu';
+        menu.innerHTML = `
+          <div class="share-menu__content">
+            <h4>Share this quote</h4>
+            <div class="share-options">
+              <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(text + ' ' + url)}" target="_blank" class="share-option">
+                <span>Twitter</span>
+              </a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}" target="_blank" class="share-option">
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://bsky.app/intent/compose?text=${encodeURIComponent(text + ' ' + url)}" target="_blank" class="share-option">
+                <span>Bluesky</span>
+              </a>
+              <button onclick="copyToClipboard('${text.replace(/'/g, "\\'")} ${url}')" class="share-option">
+                <span>Copy Link</span>
+              </button>
+            </div>
+            <button onclick="closeShareMenu()" class="share-menu__close">✕</button>
+          </div>
+          <div class="share-menu__backdrop" onclick="closeShareMenu()"></div>
+        `;
+        return menu;
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('Quote copied to clipboard!');
+          closeShareMenu();
+        });
+      }
+
+      function closeShareMenu() {
+        const menu = document.querySelector('.share-menu');
+        if (menu) {
+          menu.classList.remove('show');
+          setTimeout(() => menu.remove(), 300);
+        }
+      }
+    </script>
   </body>
 </html>
