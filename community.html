@@ -110,7 +110,7 @@
         <!-- Community Form start -->
         <div class="community-form-section">
           <div class="community-form-wrapper">
-            <form id="communityForm" class="community-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfq7sD58xYonBUw5bZUKRB-GgS2L0cu8XDdbbXTKkX0TL1WmQ/formResponse" method="POST" target="hidden_iframe">
+            <form id="communityForm" class="community-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfq7sD58xYonBUw5bZUKRB-GgS2L0cu8XDdbbXTKkX0TL1WmQ/formResponse" method="POST" target="hidden_iframe" onsubmit="console.log('Form action:', this.action)">
 
               <div class="form-group optional">
                 <label for="email" class="form-label">Email <span class="optional-text">(optional)</span></label>
@@ -229,11 +229,20 @@
     </footer>
 
     <!-- Hidden iframe for form submission -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="console.log('Iframe loaded - form submitted successfully')"></iframe>
 
     <script>
       // Form submission handling
       document.getElementById('communityForm').addEventListener('submit', function(e) {
+        console.log('Form submission started');
+
+        // Log form data for debugging
+        const formData = new FormData(e.target);
+        console.log('Form data being sent:');
+        for (let [key, value] of formData.entries()) {
+          console.log(`${key}: ${value}`);
+        }
+
         // Show loading state
         const submitButton = document.querySelector('.community-form__submit');
         const originalText = submitButton.textContent;
@@ -242,6 +251,7 @@
 
         // After form submits (brief delay for Google Forms processing)
         setTimeout(function() {
+          console.log('Redirecting to thank you page...');
           window.location.href = 'community-thank-you.html';
         }, 2000);
       });
