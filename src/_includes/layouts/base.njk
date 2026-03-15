@@ -1,0 +1,115 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,800;1,400&family=Oswald:wght@700&family=Permanent+Marker&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    <link rel="shortcut icon" href="/images/dp-favicon-3.png"/>
+
+    {% if ogTitle %}
+    <meta property="og:site_name" content="Design in Product">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://designinproduct.com{{ page.url }}">
+    <meta property="og:title" content="{{ ogTitle }}">
+    <meta property="og:description" content="{{ ogDescription }}">
+    <meta property="og:image" content="https://designinproduct.com/images/social-media-card.jpg">
+    <meta property="og:image:url" content="https://designinproduct.com/images/social-media-card.jpg">
+    <meta property="og:image:secure_url" content="https://designinproduct.com/images/social-media-card.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="{{ ogDescription }}">
+    <meta name="twitter:title" content="{{ ogTitle }}">
+    <meta name="twitter:site" content="@mediajunkie">
+    <meta name="twitter:creator" content="@mediajunkie">
+    <meta name="twitter:url" content="https://designinproduct.com{{ page.url }}">
+    <meta name="twitter:image" content="https://designinproduct.com/images/social-media-card.jpg">
+    {% endif %}
+
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% if ogTitle %}
+    <image src="/images/social-media-card.jpg" style="display: none;" alt="Design in Product social media card"></image>
+    {% endif %}
+    <div class="main-wrapper">
+      {% include "header.njk" %}
+
+      <div class="main-content-wrapper{% if contentClass %} {{ contentClass }}{% endif %}">
+        {{ content | safe }}
+      </div>
+    </div>
+
+    {% include "footer.njk" %}
+
+    {% if hasShareQuote %}
+    <script>
+      function shareQuote(quote, attribution) {
+        const text = `"${quote}" — ${attribution}`;
+        const url = window.location.href;
+
+        if (navigator.share) {
+          navigator.share({
+            title: 'Quote from Growing Product People',
+            text: text,
+            url: url
+          }).catch(err => console.log('Error sharing:', err));
+          return;
+        }
+
+        const shareMenu = createShareMenu(text, url);
+        document.body.appendChild(shareMenu);
+        shareMenu.style.display = 'block';
+        setTimeout(() => shareMenu.classList.add('show'), 10);
+      }
+
+      function createShareMenu(text, url) {
+        const menu = document.createElement('div');
+        menu.className = 'share-menu';
+        menu.innerHTML = `
+          <div class="share-menu__content">
+            <h4>Share this quote</h4>
+            <div class="share-options">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}" target="_blank" class="share-option">
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://bsky.app/intent/compose?text=${encodeURIComponent(text + ' ' + url)}" target="_blank" class="share-option">
+                <span>Bluesky</span>
+              </a>
+              <a href="https://mastodon.social/share?text=${encodeURIComponent(text + ' ' + url)}" target="_blank" class="share-option">
+                <span>Mastodon</span>
+              </a>
+              <button onclick="copyToClipboard('${text.replace(/'/g, "\\'")} ${url}')" class="share-option">
+                <span>Copy Link</span>
+              </button>
+            </div>
+            <button onclick="closeShareMenu()" class="share-menu__close">&#10005;</button>
+          </div>
+          <div class="share-menu__backdrop" onclick="closeShareMenu()"></div>
+        `;
+        return menu;
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('Quote copied to clipboard!');
+          closeShareMenu();
+        });
+      }
+
+      function closeShareMenu() {
+        const menu = document.querySelector('.share-menu');
+        if (menu) {
+          menu.classList.remove('show');
+          setTimeout(() => menu.remove(), 300);
+        }
+      }
+    </script>
+    {% endif %}
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

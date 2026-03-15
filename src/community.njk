@@ -1,0 +1,119 @@
+---
+layout: layouts/base.njk
+title: "Join the Community - Design in Product"
+activePage: community
+ogTitle: "Join the Design in Product Community"
+ogDescription: "Connect with product managers, designers, and entrepreneurs building human-centered products"
+---
+
+<!-- Hero start -->
+<div class="community-hero">
+  <div class="community-hero__content">
+    <h1 class="h1">Join the Community</h1>
+    <p class="h2 community-hero__description">Connect with product managers, designers, and entrepreneurs who are building human-centered products that actually matter.</p>
+  </div>
+</div>
+<!-- Hero end -->
+
+<!-- Community Form start -->
+<div class="community-form-section">
+  <div class="community-form-wrapper">
+    <form id="communityForm" class="community-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfq7sD58xYonBUw5bZUKRB-GgS2L0cu8XDdbbXTKkX0TL1WmQ/formResponse" method="POST" target="hidden_iframe">
+
+      <div class="form-group optional">
+        <label for="email" class="form-label">Email <span class="optional-text">(optional)</span></label>
+        <input type="email" id="email" name="entry.712314914" class="form-input" placeholder="your.email@example.com">
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group required">
+          <label for="firstName" class="form-label">First Name *</label>
+          <input type="text" id="firstName" name="entry.332859237" class="form-input" placeholder="Jane" required>
+        </div>
+        <div class="form-group required">
+          <label for="lastName" class="form-label">Last Name *</label>
+          <input type="text" id="lastName" name="entry.1051880655" class="form-input" placeholder="Doe" required>
+        </div>
+      </div>
+
+      <div class="form-group required">
+        <label for="slackEmail" class="form-label">Best email for Slack invitation *</label>
+        <input type="email" id="slackEmail" name="entry.526280290" class="form-input" placeholder="jane@company.com" required>
+        <p class="form-help-text">We'll use this to invite you to our Slack workspace</p>
+      </div>
+
+      <div class="form-group optional">
+        <label for="linkedin" class="form-label">LinkedIn profile or personal website <span class="optional-text">(optional)</span></label>
+        <input type="url" id="linkedin" name="entry.918144848" class="form-input" placeholder="https://linkedin.com/in/yourname">
+      </div>
+
+      <div class="form-group optional">
+        <label for="referral" class="form-label">How did you hear about us? <span class="optional-text">(optional)</span></label>
+        <input type="text" id="referral" name="entry.2021991320" class="form-input" placeholder="LinkedIn, Bluesky, friend recommendation, conference, etc.">
+      </div>
+
+      <div class="form-group required">
+        <label for="reason" class="form-label">Why do you want to join our community? *</label>
+        <textarea id="reason" name="entry.1746272360" class="form-textarea" placeholder="Tell us what you're hoping to get out of the community, what you're working on, or what challenges you're facing..." required></textarea>
+        <p class="form-help-text">This helps us understand how we can best support you</p>
+      </div>
+
+      <div class="form-group optional">
+        <label for="struggles" class="form-label">What are you currently struggling with? <span class="optional-text">(optional)</span></label>
+        <textarea id="struggles" name="entry.1244785818" class="form-textarea" placeholder="Product strategy, user research, team alignment, technical debt..."></textarea>
+      </div>
+
+      <div class="form-submit-section">
+        <button type="submit" class="btn pink-btn community-form__submit">Join the Community</button>
+        <p class="form-privacy-text">We respect your privacy and will never share your information.</p>
+      </div>
+
+    </form>
+  </div>
+</div>
+<!-- Community Form end -->
+
+<!-- Community Benefits start -->
+<div class="community-benefits">
+  <h3 class="h3">What you'll get</h3>
+  <div class="community-benefits__list">
+    <div class="community-benefit">
+      <img src="/images/home-icon-hand.svg" alt="Community discussions" class="community-benefit__icon">
+      <div class="community-benefit__text">
+        <h4 class="community-benefit__title">Thoughtful Discussions</h4>
+        <p class="community-benefit__description">Connect with experienced product people who care about building things that matter</p>
+      </div>
+    </div>
+    <div class="community-benefit">
+      <img src="/images/home-icon-wireframe.svg" alt="Resources and insights" class="community-benefit__icon">
+      <div class="community-benefit__text">
+        <h4 class="community-benefit__title">Resources & Insights</h4>
+        <p class="community-benefit__description">Access curated resources, frameworks, and real-world case studies</p>
+      </div>
+    </div>
+    <div class="community-benefit">
+      <img src="/images/home-icon-robot.svg" alt="Career support" class="community-benefit__icon">
+      <div class="community-benefit__text">
+        <h4 class="community-benefit__title">Career Support</h4>
+        <p class="community-benefit__description">Get advice on career growth, job opportunities, and skill development</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Community Benefits end -->
+
+<!-- Hidden iframe for form submission -->
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+{% block scripts %}
+<script>
+  document.getElementById('communityForm').addEventListener('submit', function(e) {
+    var submitButton = document.querySelector('.community-form__submit');
+    submitButton.textContent = 'Joining...';
+    submitButton.disabled = true;
+    setTimeout(function() {
+      window.location.href = '/community-thank-you.html';
+    }, 2000);
+  });
+</script>
+{% endblock %}

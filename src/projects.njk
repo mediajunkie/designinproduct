@@ -1,0 +1,149 @@
+---
+layout: layouts/base.njk
+title: "Design in Product - Projects"
+activePage: projects
+ogTitle: "Projects - Design in Product"
+ogDescription: "What happens when a product manager stops just managing products and starts building them — with AI agents as collaborators?"
+---
+
+<!-- Hero start -->
+<div class="projects-hero">
+  <div class="projects-hero__content">
+    <h1 class="h1">Building at the Intersection</h1>
+    <p class="h2 projects-hero__description">What happens when a product manager stops just managing products and starts building them&mdash;with AI agents as collaborators?</p>
+    <p class="projects-hero__subtext">These projects explore the convergence of product management and AI development. From a multi-agent PM assistant to a cuneiform reader, each one tests a different hypothesis about how humans and AI can build together.</p>
+  </div>
+</div>
+<!-- Hero end -->
+
+<!-- Thesis section -->
+<div class="projects-thesis">
+  <div class="projects-thesis__content">
+    <p class="projects-thesis__text">The spectrum below runs from <strong>AI-native systems</strong> (where AI agents are the product) through <strong>AI-assisted experiments</strong> (where AI compressed months of work into days) to <strong>traditional products</strong> (built before the agent era). The contrast tells the story.</p>
+  </div>
+</div>
+
+<!-- Flagship Projects -->
+<div class="projects-section">
+  <h2 class="projects-section__heading">Flagship Projects</h2>
+  <div class="projects-grid projects-grid--flagship">
+    {% for project in projects %}
+      {% if project.tier == "flagship" %}
+      <div class="project-card project-card--flagship">
+        <div class="project-card__header">
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <span class="project-card__status project-card__status--{{ project.status | lower }}">{{ project.status }}</span>
+        </div>
+        <p class="project-card__tagline">{{ project.tagline }}</p>
+        <p class="project-card__description">{{ project.description }}</p>
+        <div class="project-card__tech">
+          <span class="project-card__tech-label">Built with:</span>
+          <span class="project-card__tech-list">{{ project.techHighlights }}</span>
+        </div>
+        <div class="project-card__categories">
+          {% for cat in project.categories %}
+          <span class="project-card__category">{{ cat }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-card__links">
+          <a href="{{ project.url }}" class="btn pink-btn project-card__link" target="_blank">Visit Project</a>
+          {% if project.secondaryUrl %}
+          <a href="{{ project.secondaryUrl }}" class="btn blue-btn project-card__link" target="_blank">{{ project.secondaryLabel }}</a>
+          {% endif %}
+        </div>
+        {% if project.insight %}
+        <blockquote class="project-card__insight">
+          <p>"{{ project.insight }}"</p>
+          {% if project.insightSource %}<cite>— {{ project.insightSource }}</cite>{% endif %}
+        </blockquote>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Experiments -->
+<div class="projects-section">
+  <h2 class="projects-section__heading">Vibe-Coded Experiments</h2>
+  <p class="projects-section__intro">Rapid prototypes built in days, not months. Each one started as a creative itch and became a case study in what AI-assisted development makes possible.</p>
+  <div class="projects-grid projects-grid--experiments">
+    {% for project in projects %}
+      {% if project.tier == "experiment" %}
+      <div class="project-card project-card--experiment">
+        <div class="project-card__header">
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <span class="project-card__status project-card__status--{{ project.status | lower }}">{{ project.status }}</span>
+        </div>
+        <p class="project-card__tagline">{{ project.tagline }}</p>
+        <p class="project-card__description">{{ project.description }}</p>
+        <div class="project-card__tech">
+          <span class="project-card__tech-label">Built with:</span>
+          <span class="project-card__tech-list">{{ project.techHighlights }}</span>
+        </div>
+        <div class="project-card__categories">
+          {% for cat in project.categories %}
+          <span class="project-card__category">{{ cat }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-card__links">
+          <a href="{{ project.url }}" class="btn pink-btn project-card__link" target="_blank">Visit Project</a>
+        </div>
+        {% if project.insight %}
+        <blockquote class="project-card__insight">
+          <p>"{{ project.insight }}"</p>
+          {% if project.insightSource %}<cite>— {{ project.insightSource }}</cite>{% endif %}
+        </blockquote>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Products -->
+<div class="projects-section">
+  <h2 class="projects-section__heading">Focused Products</h2>
+  <p class="projects-section__intro">Standalone products with clear value propositions&mdash;one built with AI methodology, one built before it.</p>
+  <div class="projects-grid projects-grid--products">
+    {% for project in projects %}
+      {% if project.tier == "product" %}
+      <div class="project-card project-card--product">
+        <div class="project-card__header">
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <span class="project-card__status project-card__status--{{ project.status | lower }}">{{ project.status }}</span>
+        </div>
+        <p class="project-card__tagline">{{ project.tagline }}</p>
+        <p class="project-card__description">{{ project.description }}</p>
+        <div class="project-card__tech">
+          <span class="project-card__tech-label">Built with:</span>
+          <span class="project-card__tech-list">{{ project.techHighlights }}</span>
+        </div>
+        <div class="project-card__categories">
+          {% for cat in project.categories %}
+          <span class="project-card__category">{{ cat }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-card__links">
+          <a href="{{ project.url }}" class="btn pink-btn project-card__link" target="_blank">Visit Project</a>
+        </div>
+        {% if project.insight %}
+        <blockquote class="project-card__insight">
+          <p>"{{ project.insight }}"</p>
+          {% if project.insightSource %}<cite>— {{ project.insightSource }}</cite>{% endif %}
+        </blockquote>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- CTA section -->
+<div class="projects-cta">
+  <p class="projects-cta__text">Interested in how AI-assisted development can transform your product practice?</p>
+  <div class="projects-cta__links">
+    <a href="https://medium.com/building-piper-morgan" class="btn blue-btn" target="_blank">Read the Building Piper Morgan Blog</a>
+    <a href="https://calendly.com/dinp/intro-call" class="btn pink-btn">Book a Conversation</a>
+  </div>
+</div>

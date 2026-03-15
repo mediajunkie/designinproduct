@@ -1,0 +1,73 @@
+<!-- Header start -->
+<div class="header">
+  <a href="/" class="header-logo">
+    <img src="/images/dp-logo.svg" alt="Design in Product consultancy logo, which looks like a hand-sketched wireframe and DP handwritten next to it in the same style.">
+  </a>
+  <nav>
+    <ul class="main-nav__list">
+      <li class="main-nav__item product{% if activePage == 'product' %} active{% endif %}">
+        <a href="/product.html">Product</a>
+      </li>
+      <li class="main-nav__item UX{% if activePage == 'ux' %} active{% endif %}">
+        <a href="/ux.html">UX</a>
+      </li>
+      <li class="main-nav__item projects{% if activePage == 'projects' %} active{% endif %}">
+        <a href="/projects.html">Projects</a>
+      </li>
+      <li class="main-nav__item event">
+        <a href="http://designinproduct.info">Event</a>
+      </li>
+      <li class="main-nav__item books{% if activePage == 'books' %} active{% endif %}">
+        <a href="/books.html">Books</a>
+      </li>
+      <li class="main-nav__item contact{% if activePage == 'contact' %} active{% endif %}">
+        <a href="/contact.html">Contact</a>
+      </li>
+      <li class="main-nav__item about{% if activePage == 'about' %} active{% endif %}">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="main-nav__item join{% if activePage == 'community' %} active{% endif %}">
+        <a href="/community.html">Join the Community</a>
+      </li>
+    </ul>
+
+    <div class="main-nav__mobile-wrapper">
+      <label for="toggle" class="main-nav__mobile-menu-trigger">
+        <img src="/images/mobile-menu.png" alt="open menu">
+      </label>
+      <input type="checkbox" id="toggle" class="main-nav__mobile-menu-checkbox">
+      <div class="main-nav__mobile-collapse">
+        <label for="toggle" class="main-nav__mobile-menu-trigger main-nav__mobile-menu-trigger-close">
+          <img src="/images/mobile-menu-x.png" alt="close menu">
+        </label>
+        <ul class="main-nav__mobile-list">
+          <li class="main-nav__item{% if activePage == 'product' %} active{% endif %}">
+            <a href="/product.html">Product</a>
+          </li>
+          <li class="main-nav__item{% if activePage == 'ux' %} active{% endif %}">
+            <a href="/ux.html">UX</a>
+          </li>
+          <li class="main-nav__item{% if activePage == 'projects' %} active{% endif %}">
+            <a href="/projects.html">Projects</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="http://designinproduct.info">Event</a>
+          </li>
+          <li class="main-nav__item{% if activePage == 'books' %} active{% endif %}">
+            <a href="/books.html">Books</a>
+          </li>
+          <li class="main-nav__item{% if activePage == 'contact' %} active{% endif %}">
+            <a href="/contact.html">Contact</a>
+          </li>
+          <li class="main-nav__item{% if activePage == 'about' %} active{% endif %}">
+            <a href="/about.html">About</a>
+          </li>
+          <li class="main-nav__item{% if activePage == 'community' %} active{% endif %}">
+            <a href="/community.html">Join the Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Header end -->
