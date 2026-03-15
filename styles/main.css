@@ -1222,3 +1222,273 @@ line-height: 38px;
 .share-option span {
   font-size: 16px;
 }
+
+/* ================================
+   Projects Gallery Page
+   ================================ */
+
+/* Projects Hero */
+.projects-hero {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.projects-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.projects-hero__description {
+  margin-top: 30px;
+}
+.projects-hero__subtext {
+  font-size: 20px;
+  line-height: 28px;
+  color: #333;
+  margin-top: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Thesis Section */
+.projects-thesis {
+  max-width: 800px;
+  margin: 0 auto 100px;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f4ff 0%, #fff0f6 100%);
+  border-radius: 16px;
+  border-left: 4px solid #eb297d;
+}
+.projects-thesis__text {
+  font-size: 20px;
+  line-height: 30px;
+  color: #333;
+}
+.projects-thesis__text strong {
+  color: #1C5DEB;
+  font-weight: 700;
+}
+
+/* Projects Sections */
+.projects-section {
+  margin-bottom: 100px;
+}
+.projects-section__heading {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #000;
+}
+.projects-section__intro {
+  font-size: 20px;
+  line-height: 28px;
+  color: #555;
+  margin-bottom: 50px;
+  max-width: 700px;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  gap: 40px;
+}
+.projects-grid--flagship {
+  grid-template-columns: repeat(2, 1fr);
+}
+.projects-grid--experiments {
+  grid-template-columns: repeat(2, 1fr);
+}
+.projects-grid--products {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Project Cards */
+.project-card {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 35px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Tier-specific card accents */
+.project-card--flagship {
+  border-color: #eb297d;
+  border-width: 2px;
+}
+.project-card--flagship:hover {
+  border-color: #eb297d;
+  box-shadow: 0 8px 30px rgba(235, 41, 125, 0.12);
+}
+.project-card--experiment {
+  border-color: #1C5DEB;
+}
+.project-card--experiment:hover {
+  border-color: #1C5DEB;
+  box-shadow: 0 8px 30px rgba(28, 93, 235, 0.12);
+}
+.project-card--product {
+  border-color: #e0e0e0;
+}
+.project-card--product:hover {
+  border-color: #333;
+}
+
+/* Card Header */
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.project-card__name {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000;
+}
+
+/* Status Badge */
+.project-card__status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.project-card__status--active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.project-card__status--complete {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+.project-card__status--shipped {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* Card Content */
+.project-card__tagline {
+  font-family: "Permanent Marker", cursive;
+  font-size: 18px;
+  line-height: 24px;
+  color: #eb297d;
+  margin-bottom: 15px;
+}
+.project-card__description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #444;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Tech Highlights */
+.project-card__tech {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.project-card__tech-label {
+  font-weight: 700;
+  color: #666;
+}
+.project-card__tech-list {
+  color: #555;
+}
+
+/* Category Tags */
+.project-card__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.project-card__category {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Card Links */
+.project-card__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.project-card__link {
+  padding: 10px 20px;
+  font-size: 15px;
+  display: inline-block;
+}
+
+/* Insight Blockquote */
+.project-card__insight {
+  margin-top: auto;
+  padding: 20px;
+  background: #fafafa;
+  border-left: 3px solid #eb297d;
+  border-radius: 0 8px 8px 0;
+}
+.project-card__insight p {
+  font-style: italic;
+  font-size: 15px;
+  line-height: 22px;
+  color: #444;
+  margin-bottom: 8px;
+}
+.project-card__insight cite {
+  font-size: 13px;
+  color: #888;
+  font-style: normal;
+}
+
+/* Projects CTA */
+.projects-cta {
+  text-align: center;
+  margin: 80px 0 40px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #fff0f6 0%, #f0f4ff 100%);
+  border-radius: 16px;
+}
+.projects-cta__text {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 30px;
+  color: #333;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.projects-cta__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.projects-cta__links .btn {
+  width: 280px;
+  display: inline-block;
+}
+
+/* Nav width for Projects item */
+.main-nav__item.projects {
+  width: 94px;
+}
