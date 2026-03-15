@@ -1492,3 +1492,94 @@ line-height: 38px;
 .main-nav__item.projects {
   width: 94px;
 }
+
+/* Footer bottom row */
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-colophon-link {
+  font-size: 16px;
+  color: #999;
+  text-decoration: none;
+  font-weight: 300;
+}
+.footer-colophon-link:hover {
+  color: #eb297d;
+  text-decoration: underline;
+}
+
+/* ================================
+   Colophon Page
+   ================================ */
+.colophon-hero {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.colophon-hero__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.colophon-hero__description {
+  margin-top: 30px;
+}
+
+.colophon-section {
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+.colophon-text p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.colophon-text em {
+  font-style: italic;
+}
+
+.colophon-changes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+.colophon-change__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.colophon-change__list {
+  list-style: disc;
+  padding-left: 20px;
+}
+.colophon-change__list li {
+  font-size: 16px;
+  line-height: 24px;
+  color: #444;
+  margin-bottom: 10px;
+}
+.colophon-change__list code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.colophon-stack {
+  margin-top: 20px;
+}
+.colophon-stack__item {
+  font-size: 18px;
+  line-height: 28px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.colophon-stack__item strong {
+  font-weight: 700;
+}

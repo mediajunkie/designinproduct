@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+title: "Colophon - Design in Product"
+activePage: ""
+ogTitle: "Colophon - Design in Product"
+ogDescription: "How this site was rebuilt: a human-AI collaboration case study"
+---
+
+<!-- Colophon Hero start -->
+<div class="colophon-hero">
+  <div class="colophon-hero__content">
+    <h1 class="h1">Colophon</h1>
+    <p class="h2 colophon-hero__description">How this site was rebuilt&mdash;and what it taught us about human-AI collaboration.</p>
+  </div>
+</div>
+<!-- Colophon Hero end -->
+
+<!-- The Story start -->
+<div class="colophon-section">
+  <h3 class="h3">The Story</h3>
+  <div class="colophon-text">
+    <p>In March 2025, Christian Crumlish sat down with Claude (Anthropic's AI assistant) to add a projects gallery to designinproduct.com. What started as "add a page showcasing eight projects" turned into a full-site modernization&mdash;a migration from hand-coded static HTML to <a href="https://www.11ty.dev/" target="_blank" class="blue-link">Eleventy (11ty)</a>, eliminating hundreds of lines of duplicated code across ten pages.</p>
+    <p>The entire process&mdash;researching the projects, designing the gallery, migrating all pages to a shared template system, writing the CSS, configuring the build pipeline, and deploying via GitHub Actions&mdash;happened in a single extended conversation.</p>
+  </div>
+</div>
+<!-- The Story end -->
+
+<!-- What Changed start -->
+<div class="colophon-section">
+  <h3 class="h3">What Changed</h3>
+  <div class="colophon-changes">
+    <div class="colophon-change">
+      <h4 class="colophon-change__title">Before</h4>
+      <ul class="colophon-change__list">
+        <li>10+ standalone HTML files with duplicated headers, footers, and scripts</li>
+        <li>Navigation inconsistencies across pages</li>
+        <li>Share quote JavaScript defined outside <code>&lt;script&gt;</code> tags (a bug in 4 pages)</li>
+        <li>Inline <code>document.write()</code> for the copyright year</li>
+        <li>No build step, no templating</li>
+      </ul>
+    </div>
+    <div class="colophon-change">
+      <h4 class="colophon-change__title">After</h4>
+      <ul class="colophon-change__list">
+        <li>Eleventy with Nunjucks templates and a shared layout system</li>
+        <li>Consistent navigation with a single source of truth</li>
+        <li>Consolidated, working share functionality</li>
+        <li>Dynamic copyright year via a Nunjucks filter</li>
+        <li>Data-driven projects gallery from a JSON file</li>
+        <li>Automated build and deploy via GitHub Actions</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- What Changed end -->
+
+<!-- The Collaboration start -->
+<div class="colophon-section">
+  <h3 class="h3">The Collaboration</h3>
+  <div class="colophon-text">
+    <p>This is itself one of the projects in the <a href="/projects/" class="blue-link">gallery</a>&mdash;a case study in what happens when a product person directs an AI collaborator on a real codebase. Christian provided the vision, project context, editorial decisions, and quality judgment. Claude handled the research, code generation, migration mechanics, and deployment configuration.</p>
+    <p>The interesting part isn't that AI wrote code. It's that the conversation <em>was</em> the product process: requirements gathering, architectural decisions, implementation, debugging, and deployment&mdash;all in one continuous thread.</p>
+  </div>
+</div>
+<!-- The Collaboration end -->
+
+<!-- Tech Stack start -->
+<div class="colophon-section">
+  <h3 class="h3">Tech Stack</h3>
+  <div class="colophon-stack">
+    <div class="colophon-stack__item">
+      <strong>Static Site Generator:</strong> <a href="https://www.11ty.dev/" target="_blank" class="blue-link">Eleventy 2.0</a>
+    </div>
+    <div class="colophon-stack__item">
+      <strong>Templating:</strong> Nunjucks
+    </div>
+    <div class="colophon-stack__item">
+      <strong>Hosting:</strong> GitHub Pages
+    </div>
+    <div class="colophon-stack__item">
+      <strong>CI/CD:</strong> GitHub Actions
+    </div>
+    <div class="colophon-stack__item">
+      <strong>Fonts:</strong> Nunito Sans, Oswald, Permanent Marker (Google Fonts)
+    </div>
+    <div class="colophon-stack__item">
+      <strong>AI Collaborator:</strong> Claude (Anthropic)
+    </div>
+  </div>
+</div>
+<!-- Tech Stack end -->
+
+<!-- Event callout start -->
+<div class="colophon-section">
+  <h3 class="h3">Design in Product Conference</h3>
+  <div class="colophon-text">
+    <p>Design in Product also hosts a conference exploring the intersection of design and product management. Learn more at <a href="https://rosenfeldmedia.com/design-in-product/home/" target="_blank" class="blue-link">Rosenfeld Media</a>.</p>
+  </div>
+</div>
+<!-- Event callout end -->

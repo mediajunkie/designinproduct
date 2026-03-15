@@ -603,4 +603,23 @@
   .projects-cta__links .btn {
     width: 260px;
   }
+
+  /* Colophon */
+  .colophon-section {
+    margin-bottom: 50px;
+  }
+  .colophon-text p {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .colophon-changes {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Footer bottom */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
