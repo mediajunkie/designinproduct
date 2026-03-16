@@ -4,27 +4,30 @@
   <nav>
     <ul class="main-nav__list footer-nav__list">
       <li class="main-nav__item product{% if activePage == 'product' %} active{% endif %}">
-        <a href="/product.html">Product</a>
+        <a href="/product/">Product</a>
       </li>
       <li class="main-nav__item UX{% if activePage == 'ux' %} active{% endif %}">
-        <a href="/ux.html">UX</a>
+        <a href="/ux/">UX</a>
       </li>
       <li class="main-nav__item projects{% if activePage == 'projects' %} active{% endif %}">
-        <a href="/projects.html">Projects</a>
+        <a href="/projects/">Projects</a>
       </li>
       <li class="main-nav__item books{% if activePage == 'books' %} active{% endif %}">
-        <a href="/books.html">Books</a>
+        <a href="/books/">Books</a>
       </li>
       <li class="main-nav__item contact{% if activePage == 'contact' %} active{% endif %}">
-        <a href="/contact.html">Contact</a>
+        <a href="/contact/">Contact</a>
       </li>
       <li class="main-nav__item about{% if activePage == 'about' %} active{% endif %}">
-        <a href="/about.html">About</a>
+        <a href="/about/">About</a>
       </li>
       <li class="main-nav__item join{% if activePage == 'community' %} active{% endif %}">
-        <a href="/community.html">Join The Community</a>
+        <a href="/community/">Join The Community</a>
       </li>
     </ul>
   </nav>
-  <span class="footer-copyright">Copyright &copy; 2021 &ndash; {{ "" | currentYear }} Design in Product. All rights reserved.</span>
+  <div class="footer-bottom">
+    <span class="footer-copyright">Copyright &copy; 2021 &ndash; {{ "" | currentYear }} Design in Product. All rights reserved.</span>
+    <a href="/colophon/" class="footer-colophon-link">Colophon</a>
+  </div>
 </footer>

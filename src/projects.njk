@@ -34,6 +34,11 @@ ogDescription: "What happens when a product manager stops just managing products
           <h3 class="project-card__name">{{ project.name }}</h3>
           <span class="project-card__status project-card__status--{{ project.status | lower }}">{{ project.status }}</span>
         </div>
+        {% if project.image %}
+        <div class="project-card__image-wrap">
+          <img src="{{ project.image }}" alt="{{ project.name }} screenshot" class="project-card__image" loading="lazy">
+        </div>
+        {% endif %}
         <p class="project-card__tagline">{{ project.tagline }}</p>
         <p class="project-card__description">{{ project.description }}</p>
         <div class="project-card__tech">
@@ -75,6 +80,11 @@ ogDescription: "What happens when a product manager stops just managing products
           <h3 class="project-card__name">{{ project.name }}</h3>
           <span class="project-card__status project-card__status--{{ project.status | lower }}">{{ project.status }}</span>
         </div>
+        {% if project.image %}
+        <div class="project-card__image-wrap">
+          <img src="{{ project.image }}" alt="{{ project.name }} screenshot" class="project-card__image" loading="lazy">
+        </div>
+        {% endif %}
         <p class="project-card__tagline">{{ project.tagline }}</p>
         <p class="project-card__description">{{ project.description }}</p>
         <div class="project-card__tech">
@@ -113,6 +123,11 @@ ogDescription: "What happens when a product manager stops just managing products
           <h3 class="project-card__name">{{ project.name }}</h3>
           <span class="project-card__status project-card__status--{{ project.status | lower }}">{{ project.status }}</span>
         </div>
+        {% if project.image %}
+        <div class="project-card__image-wrap">
+          <img src="{{ project.image }}" alt="{{ project.name }} screenshot" class="project-card__image" loading="lazy">
+        </div>
+        {% endif %}
         <p class="project-card__tagline">{{ project.tagline }}</p>
         <p class="project-card__description">{{ project.description }}</p>
         <div class="project-card__tech">
