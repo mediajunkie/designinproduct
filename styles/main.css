@@ -1356,6 +1356,19 @@ line-height: 38px;
   color: #000;
 }
 
+/* Card Image */
+.project-card__image-wrap {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.project-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
 /* Status Badge */
 .project-card__status {
   display: inline-block;
