@@ -1,0 +1,147 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,800;1,400&family=Oswald:wght@700&family=Permanent+Marker&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="shortcut icon" href="../images/dp-favicon-3.png"/>
+    <title>Design in Product - Internal</title>
+    <style>
+      .internal__wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .internal__project-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        background: #fafafa;
+      }
+      .internal__project-card h3 {
+        margin-top: 0;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.3rem;
+      }
+      .internal__project-card p {
+        font-family: 'Nunito Sans', sans-serif;
+        line-height: 1.6;
+        color: #555;
+      }
+      .internal__badge {
+        display: inline-block;
+        background: #e8f0fe;
+        color: #1967d2;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-family: 'Nunito Sans', sans-serif;
+        margin-right: 0.4rem;
+        margin-bottom: 0.4rem;
+      }
+      .internal__section {
+        margin-bottom: 2.5rem;
+      }
+      .internal__brief-list {
+        list-style: none;
+        padding: 0;
+      }
+      .internal__brief-list li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid #eee;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      .internal__brief-list li:last-child {
+        border-bottom: none;
+      }
+      .internal__empty {
+        color: #999;
+        font-style: italic;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="header">
+        <a href="/" class="header-logo">
+          <img src="../images/dp-logo.svg" alt="Design in Product consultancy logo">
+        </a>
+      </div>
+
+      <div class="main-content-wrapper internal__wrapper">
+        <h1 class="h1">Cross-Pollination Hub</h1>
+        <p class="pageDescription">
+          Internal knowledge-sharing between sibling AI agent projects.
+          Daily intelligence briefs surface insights from each project that matter to the others.
+        </p>
+
+        <div class="internal__section">
+          <h2>Registered Projects</h2>
+
+          <div class="internal__project-card">
+            <h3>Klatch</h3>
+            <p>Local-first web app for managing Claude AI conversations with a Slack-inspired interface.</p>
+            <div>
+              <span class="internal__badge">conversation-management</span>
+              <span class="internal__badge">agent-coordination</span>
+              <span class="internal__badge">context-models</span>
+              <span class="internal__badge">multi-agent-systems</span>
+            </div>
+          </div>
+
+          <div class="internal__project-card">
+            <h3>Piper Morgan</h3>
+            <p>Hybrid Python + Next.js product with extensive knowledge management infrastructure.</p>
+            <div>
+              <span class="internal__badge">knowledge-management</span>
+              <span class="internal__badge">agent-workflows</span>
+              <span class="internal__badge">product-development</span>
+              <span class="internal__badge">coordination</span>
+              <span class="internal__badge">methodology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="internal__section">
+          <h2>Latest Briefs</h2>
+          <h3>For Klatch</h3>
+          <ul class="internal__brief-list">
+            <li class="internal__empty">No briefs yet. The daily sweep hasn't run.</li>
+          </ul>
+
+          <h3>For Piper Morgan</h3>
+          <ul class="internal__brief-list">
+            <li class="internal__empty">No briefs yet. The daily sweep hasn't run.</li>
+          </ul>
+        </div>
+
+        <div class="internal__section">
+          <h2>How It Works</h2>
+          <p style="font-family: 'Nunito Sans', sans-serif; line-height: 1.6; color: #555;">
+            A daily agent process reads recent changes from all registered projects and
+            produces targeted intelligence briefs. Each brief summarizes what one project
+            discovered that's relevant to another. The process is defined in
+            <code>cross-pollination/process/daily-sweep.md</code> and the project registry
+            lives in <code>cross-pollination/projects.json</code>.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <img class="footer-separator" src="../images/footer-line-illus.png" alt="separator">
+        <img class="footer-logo" src="../images/dp-logo.svg" alt="Design in Product logo">
+        <span class="footer-copyright">Copyright &copy; 2021 &ndash;
+          <script type="text/javascript">document.write( new Date().getFullYear() );</script>
+          Design in Product. All rights reserved.</span>
+      </footer>
+    </div>
+  </body>
+</html>

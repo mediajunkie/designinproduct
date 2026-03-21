@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "description": "Registry of projects participating in cross-pollination. Add new projects here to scale the network.",
+  "projects": [
+    {
+      "id": "klatch",
+      "name": "Klatch",
+      "repo": "Design-in-Product/klatch",
+      "description": "Local-first web app for managing Claude AI conversations with a Slack-inspired interface",
+      "watch_paths": {
+        "session_logs": "docs/logs/",
+        "planning": "docs/plans/",
+        "intel": "docs/intel/",
+        "inter_agent_memos": "docs/mail/",
+        "research": "research/",
+        "architecture": "docs/"
+      },
+      "config_file": "CLAUDE.md",
+      "agent_personas": ["Daedalus", "Argus", "Theseus", "Calliope", "Mnemosyne", "Hermes", "Ariadne"],
+      "topics": ["conversation-management", "agent-coordination", "context-models", "import-export", "multi-agent-systems"]
+    },
+    {
+      "id": "piper-morgan",
+      "name": "Piper Morgan",
+      "repo": "mediajunkie/piper-morgan-product",
+      "description": "Hybrid Python + Next.js product with extensive knowledge management infrastructure",
+      "watch_paths": {
+        "session_logs": "dev/",
+        "daily_synthesis": "docs/omnibus-logs/",
+        "planning": "docs/internal/planning/current/",
+        "briefings": "docs/briefing/",
+        "knowledge_base": "knowledge/",
+        "gameplans": "knowledge/gameplans/",
+        "retrospectives": "docs/internal/retrospectives/"
+      },
+      "config_file": "CLAUDE.md",
+      "agent_personas": [],
+      "topics": ["knowledge-management", "agent-workflows", "product-development", "coordination", "methodology"]
+    }
+  ],
+  "cross_pollination": {
+    "brief_output_dir": "internal/cross-pollination/briefs/",
+    "naming_convention": "YYYY-MM-DD-brief-from-{source}-for-{target}.md",
+    "hub_repo": "mediajunkie/designinproduct"
+  }
+}
