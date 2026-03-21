@@ -5,8 +5,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "products": "products" });
 
+  // Pass through internal hub (cross-pollination briefs, unlisted)
+  eleventyConfig.addPassthroughCopy({ "internal": "internal" });
+
   // Watch for changes
   eleventyConfig.addWatchTarget("styles/");
+  eleventyConfig.addWatchTarget("internal/");
 
   // Current year filter for copyright
   eleventyConfig.addFilter("currentYear", function() {
