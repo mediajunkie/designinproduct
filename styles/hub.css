@@ -1,0 +1,269 @@
+/* ================================
+   Cross-Pollination Hub Page
+   ================================ */
+
+/* Hub Hero */
+.hub-hero {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.hub-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hub-hero__description {
+  margin-top: 30px;
+}
+
+/* Hub Sections */
+.hub-section {
+  margin-bottom: 80px;
+}
+.hub-section__heading {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #000;
+}
+.hub-section__intro {
+  font-size: 20px;
+  line-height: 28px;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+/* Projects Grid (reuses project-card styles from main.css) */
+.hub-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Brief Cards */
+.hub-brief-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hub-brief-card {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 35px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.hub-brief-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+.hub-brief-card--substantive {
+  border-color: #eb297d;
+  border-width: 2px;
+}
+.hub-brief-card--substantive:hover {
+  box-shadow: 0 8px 30px rgba(235, 41, 125, 0.12);
+}
+.hub-brief-card--nominal {
+  border-color: #e0e0e0;
+}
+
+.hub-brief-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hub-brief-card__date {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #000;
+}
+.hub-brief-card__status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.hub-brief-card__status--substantive {
+  background: #fff0f6;
+  color: #eb297d;
+}
+.hub-brief-card__status--nominal {
+  background: #f5f5f5;
+  color: #888;
+}
+
+.hub-brief-card__summary {
+  font-size: 16px;
+  line-height: 24px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.hub-brief-card__insights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.hub-brief-card__insight-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.hub-brief-card__links {
+  display: flex;
+  gap: 12px;
+}
+.hub-brief-card__link {
+  padding: 10px 20px;
+  font-size: 15px;
+  display: inline-block;
+}
+
+/* How It Works Steps */
+.hub-how-it-works {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 700px;
+}
+.hub-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.hub-step__number {
+  background-color: #1C5DEB;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.hub-step__content {
+  flex: 1;
+}
+.hub-step__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.hub-step__description {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+}
+
+/* Footer Note */
+.hub-footer-note {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 25px;
+  background: #fafafa;
+  border-radius: 8px;
+  border-left: 3px solid #e0e0e0;
+}
+.hub-footer-note p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #666;
+}
+.hub-footer-note code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+/* ================================
+   Hub Responsive
+   ================================ */
+@media only screen and (max-width: 1023px) {
+  .hub-hero__description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .hub-section {
+    margin-bottom: 60px;
+  }
+  .hub-section__heading {
+    font-size: 32px;
+    text-align: center;
+  }
+  .hub-section__intro {
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hub-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .hub-brief-card {
+    padding: 25px;
+  }
+  .hub-brief-card__date {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .hub-brief-card__summary {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .hub-brief-card__links {
+    flex-direction: column;
+  }
+  .hub-brief-card__link {
+    text-align: center;
+  }
+
+  .hub-step {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .hub-step__number {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    align-self: center;
+  }
+  .hub-step__title {
+    font-size: 20px;
+  }
+  .hub-step__description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .hub-footer-note {
+    margin: 0 20px 40px;
+  }
+}
