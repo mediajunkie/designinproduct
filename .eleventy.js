@@ -5,8 +5,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "products": "products" });
 
-  // Pass through internal hub (cross-pollination briefs, unlisted)
-  eleventyConfig.addPassthroughCopy({ "internal": "internal" });
+  // Pass through cross-pollination data files (briefs, registry, process docs)
+  eleventyConfig.addPassthroughCopy({ "internal/cross-pollination": "internal/cross-pollination" });
 
   // Watch for changes
   eleventyConfig.addWatchTarget("styles/");
