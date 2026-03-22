@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/responsive.css">
     <link rel="stylesheet" href="/styles/hub.css">
+    <link rel="stylesheet" href="/styles/brief.css">
     <link rel="shortcut icon" href="/images/dp-favicon-3.png"/>
 
     {% if ogTitle %}
@@ -49,7 +50,7 @@
     {% if hasShareQuote %}
     <script>
       function shareQuote(quote, attribution) {
-        const text = `"${quote}" \u2014 ${attribution}`;
+        const text = `"${quote}" — ${attribution}`;
         const url = window.location.href;
 
         if (navigator.share) {
