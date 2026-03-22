@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "description": "Registry of projects participating in cross-pollination. Add new projects here to scale the network.",
   "projects": [
     {
@@ -15,6 +15,7 @@
         "research": "research/",
         "architecture": "docs/"
       },
+      "brief_delivery_path": "docs/briefs/cross-pollination/",
       "config_file": "CLAUDE.md",
       "agent_personas": ["Daedalus", "Argus", "Theseus", "Calliope", "Mnemosyne", "Hermes", "Ariadne"],
       "topics": ["conversation-management", "agent-coordination", "context-models", "import-export", "multi-agent-systems"]
@@ -33,6 +34,7 @@
         "gameplans": "knowledge/gameplans/",
         "retrospectives": "docs/internal/retrospectives/"
       },
+      "brief_delivery_path": "docs/briefs/cross-pollination/",
       "config_file": "CLAUDE.md",
       "agent_personas": [],
       "topics": ["knowledge-management", "agent-workflows", "product-development", "coordination", "methodology"]
