@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+
+<meta name="robots" content="noindex, nofollow">
+
+<div class="brief-page">
+  <div class="brief-page__nav">
+    <a href="/internal/" class="brief-page__back">&larr; Back to Hub</a>
+    {% if status %}
+    <span class="hub-brief-card__status hub-brief-card__status--{{ status }}">{{ status }}</span>
+    {% endif %}
+  </div>
+  <article class="brief-page__content prose">
+    {{ content | safe }}
+  </article>
+  <div class="brief-page__footer">
+    <a href="/internal/" class="btn pink-btn">&larr; Back to Hub</a>
+  </div>
+</div>
