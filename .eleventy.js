@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  // Custom filters
+  eleventyConfig.addFilter("currentYear", () => new Date().getFullYear());
+
   // Pass through static assets (these are at project root, not in src/)
   eleventyConfig.addPassthroughCopy({ "images": "images" });
   eleventyConfig.addPassthroughCopy({ "styles": "styles" });
