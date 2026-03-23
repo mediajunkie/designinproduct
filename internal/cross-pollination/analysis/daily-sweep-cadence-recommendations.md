@@ -106,8 +106,47 @@ Even nominal briefs should update `current.md` in each project repo. This ensure
 
 ---
 
+## Recommendation 6: Recognize Temporal and Asymmetric Relevance
+
+The initial retro assumed cross-pollination is symmetric and contemporaneous — Project A did something yesterday that Project B needs today. But the real pattern is richer:
+
+### Three directions of relevance
+
+1. **Project A → Project B** (cross-project, forward): Klatch discovers the 5-layer prompt model; PM agents should know about it.
+2. **Project B → Project A** (cross-project, forward): PM ships registry-driven capability gating; Klatch agents should know about it.
+3. **Project A → Project A** (intra-project, temporal): PM's Pattern-061 from February is useful to a new PM agent spinning up in March. Klatch's March 8 weekend sprint (Steps 1-5 in 48 hours) contains design decisions that later Klatch agents need to understand.
+
+The daily sweep currently handles (1) and (2). Direction (3) — **later agents learning about learnings that preceded them** — is equally important but not yet served by this process.
+
+### Why this matters
+
+A project's accumulated methodology (patterns, ADRs, session protocols, failed experiments) is a knowledge base. When a new agent spins up, it reads its briefing docs but may not know *why* decisions were made. The cross-pollination brief can surface this:
+
+- PM's 61 ADRs and 62 patterns are a decision-making reference for Klatch agents facing similar architectural choices
+- Klatch's rapid-prototype weekend (v0.1 → v0.5 in 48 hours) contains tacit design rationale that later Klatch agents inherit without context
+- PM's months of multi-agent coordination methodology (mailbox evolution, session protocols, omnibus synthesis) are directly applicable to Klatch's growing agent team
+
+### Implication for the sweep
+
+The relevance test (Recommendation 2) should be expanded:
+
+> **Temporal test:** Did one project produce something during this period that would help a *future* agent on *either* project understand why things are the way they are?
+
+This doesn't change the daily cadence — temporal relevance accumulates slowly and is better served by periodic retrospectives (like the March 10-21 retro) or by enriching the per-project traditions/briefing documents. But the sweep agent should *notice* when temporal relevance is building up and flag it:
+
+```markdown
+## Temporal Note
+[Project]'s [artifact] from [date] contains [insight type] that isn't yet
+captured in any agent-facing document. Consider adding to [traditions doc /
+briefing / CLAUDE.md].
+```
+
+This turns the sweep into a **knowledge gap detector**, not just a news wire.
+
+---
+
 ## Implementation
 
-These recommendations are designed to be applied as edits to `process/daily-sweep.md`. They do not require changes to the brief format, the project registry, or the delivery pipeline. The cadence-log.csv is additive.
+These recommendations are designed to be applied as edits to `process/daily-sweep.md`. They do not require changes to the brief format, the project registry, or the delivery pipeline. The cadence-log.csv is additive. The temporal relevance note is an optional section in the brief body.
 
 To apply: review these recommendations, then update `daily-sweep.md` accordingly. The retro analysis at `analysis/cross-project-retro-march-10-21.md` provides the evidence base.
